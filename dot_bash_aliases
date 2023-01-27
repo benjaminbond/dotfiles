@@ -1,0 +1,33 @@
+alias ..='cd ..'
+alias ...='cd ../../../'
+alias ....='cd ../../../../'
+alias .....='cd ../../../../'
+alias cd..='cd ..'
+alias dir='ls'
+
+alias ll='ls -alFh'
+alias la='ls -Ah'
+alias l='ls -CFh'
+
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+
+alias apt-get='sudo apt-get'
+alias apt='sudo apt'
+
+alias path='echo -e ${PATH//:/\\n} | sort ' # nice path printing
+
+alias bashrc='sudo -E env "PATH=$PATH" code ~/.bashrc'
+alias aliases='sudo -E env "PATH=$PATH" code ~/.bash_aliases'
+
+alias update='sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade'
+
+alias porn='cd /mnt/e/Plex/Porn'
+alias downloads='cd /mnt/d/Downloads'
+alias reload='source ~/.bashrc'
+
+function cd {
+    builtin cd "$@" && ls -F
+    }
+
